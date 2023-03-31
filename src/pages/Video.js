@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
-import "./Video.css";
+import VideoFooter from "./components/footer/VideoFooter";
+import "./video.css";
 
 function Video() {
   const videoRef = useRef(null); /* variavel */
@@ -17,7 +18,7 @@ function Video() {
 
   return (
     <div className="video">
-      Eu sou um componente Video
+      
       <video
         className="video__player"
         ref={videoRef}
@@ -25,6 +26,8 @@ function Video() {
         loop
         src="https://firebasestorage.googleapis.com/v0/b/jornada-b5e9d.appspot.com/o/brecker2.mp4?alt=media&token=9aa979e9-0907-4093-abd5-a71efe4fc946"
       ></video>
+      {/* Side bar */}
+      <VideoFooter />
     </div>
   );
 }
